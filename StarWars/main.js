@@ -121,12 +121,13 @@ let people = {
       }
     ]
   };
+  let card_count = document.getElementsByClassName("card").length;
   let homeworldsRaw = [];
-  for(let i=0;i<20;i++)
+  for(let i=0;i<card_count;i++)
   {
       homeworldsRaw.push(people.characters[i].homeworld)
   }
-  for(let i=0;i<20;i++)
+  for(let i=0;i<card_count;i++)
   {
       if(homeworldsRaw[i] == null || undefined)
       {
@@ -147,7 +148,7 @@ let people = {
       document.getElementsByClassName("btn")[0].innerHTML = "Karakterleri Gizle"
       document.getElementById("cardiv").style.display="block";
       
-      for(let i=0;i<20;i++)
+      for(let i=0;i<card_count;i++)
       {
           document.getElementsByClassName("col-12")[i].classList.remove("order-x");
           if(evt.currentTarget.id == document.getElementsByClassName("card-text")[i].innerHTML)
@@ -164,7 +165,7 @@ let people = {
           }
       }
   }
-  for(let i=0;i<10;i++)
+  for(let i=0;i<homeworldsUnique.length;i++)
   {
       document.getElementsByClassName("form-check-input")[i].id = homeworldsUnique[i];
       document.getElementsByClassName("form-check-label")[i].htmlFor = homeworldsUnique[i];
@@ -174,7 +175,7 @@ let people = {
   {
       return filter
   })
-  for(let i=0;i<20;i++)
+  for(let i=0;i<card_count;i++)
   {
       document.getElementsByClassName("card-title")[i].innerHTML = people.characters[i].name;
       document.getElementsByClassName("card-text")[i].innerHTML = people.characters[i].homeworld;
@@ -186,14 +187,14 @@ let people = {
   }
   function dnone()
   {
-      for(let i=0;i<20;i++)
+      for(let i=0;i<card_count;i++)
       {
           document.getElementsByClassName("col-12")[i].classList.remove("order-x");
       }
       if(document.getElementsByClassName("btn")[0].innerHTML == "Karakterleri Göster")
       {
           document.getElementById("cardiv").style.display = "block";
-          for(let i=0;i<20;i++)
+          for(let i=0;i<card_count;i++)
           {
               
               document.getElementsByClassName("card")[i].style.display = "block";
@@ -212,7 +213,7 @@ let people = {
       ele[i].checked = false;
  }
   }
-  for(let i=0;i<20;i++)
+  for(let i=0;i<card_count;i++)
   {
       document.getElementsByClassName("card-img-top")[i].style.height="23rem"
   }
