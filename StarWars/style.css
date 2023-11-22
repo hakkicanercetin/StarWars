@@ -8,27 +8,16 @@
 }
 body
 {
+    min-height: 100vh;
     background: url(images/bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    color: white !important;
+    color : #fff !important;
 }
 @media (max-width:992px) {
     .container form
     {
         display: block !important;
-    }
-    body
-    {
-        background-repeat: repeat;
-        background-size:auto;
-    }
-}
-@media (max-width:1200px) {
-    body
-    {
-        background-repeat: repeat;
-        background-size:auto;
     }
 }
 @media (min-width:1200px) {
@@ -40,4 +29,20 @@ body
 .order-x
 {
     order:-1;
+}
+.image-wrapper .col-12 .card
+{
+    margin:0 auto;
+}
+.image-wrapper .col-12
+{
+    margin-top: 16px;
+}
+.form-check .form-check-input
+{
+    margin-left: 0 !important;
+}
+.radiodiv > div
+{
+    display: inline-block;
 }
